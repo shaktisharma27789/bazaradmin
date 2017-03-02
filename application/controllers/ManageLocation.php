@@ -3,8 +3,8 @@ class ManageLocation extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->database();
-		$this->load->library('session');
+		/*test*/
+	    $this->load->library('session');
 		$this->load->helper('form');
         $this->load->library('form_validation');
 		$this->load->model('ManageLocation_model');
@@ -74,7 +74,7 @@ class ManageLocation extends CI_Controller{
 	}
 	
 	
-	public function addCity(){
+	public function addCity(){ 
 		   $data=array('city_name'=>$this->input->post('city_name'),
 		   'city_state'=>$this->input->post('city_state'));
 		   $result = $this->ManageLocation_model->createCity($data);
